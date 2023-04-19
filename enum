@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+enum day{mon,tue,wed,thu,fri,sat,sun};
+//enum day{mon=1,tue,wed,thu=5,fri,sat,sun}; can also do this to start from any no.
+int main()
+{
+day d;
+d=mon;
+d=tue;
+d=fri;
+cout<<mon<<endl;
+cout<<tue<<endl;
+cout<<fri<<endl;
+return 0;
+}
