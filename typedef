@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+typedef int marks ;
+typedef int rollno ;
+int main( )
+{
+marks m1, m2, m3;
+m1=50;
+m2=30;
+m3=69;
+
+rollno r1 ,r2, r3;
+r1 =20;
+r2=21;
+r3=22;
+
+cout<<"value of m1: "<<m1<<endl;
+cout<<"value of m2: "<<m2<<endl;
+cout<<"value of m3: "<<m3<<endl;
+cout<<"value of r1: "<<r1<<endl;
+cout<<"value of r2: "<<r2<<endl;
+cout<<"value of r3: "<<r3<<endl;
+return 0;
+}
