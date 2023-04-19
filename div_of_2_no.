@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    cout<<"enter two no.: "<<endl;
+    cin>>a>>b;
+    if (b==0)
+    {
+       cout<<"division by zero not possible"<<endl;
+    }
+    else
+    {
+        c=a/b;
+       cout<<"answer is: "<<c<<endl;
+    }
+    return 0;
+}
