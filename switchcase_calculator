@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"menu"<<endl;
+    cout<<"1]add"<<endl;
+    cout<<"2]sub"<<endl;
+    cout<<"3]mul"<<endl;
+    cout<<"4]div"<<endl;   
+    int a,b,c,choice;
+
+    cout<<"enter your choice: "<<endl;
+    cin>>choice;
+    cout<<"enter two number: "<<endl;
+    cin>>a>>b;
+
+    switch(choice)
+    {
+        case 1:
+             c=a+b;
+             break;
+        case 2:
+             c=a-b;
+             break;
+        case 3:
+             c=a*b;
+             break;
+        case 4:
+             c=a/b;
+             break;
+        default:
+        cout<<"invalid choice"<<endl;
+    } 
+    cout<<"answer is:"<<c<<endl;
+    return 0;
+}
