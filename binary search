@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int x[10]={5,12,34,35,58,67,74,81,92,99};
+    int key,mid ,i,l=0,h=9;
+
+    cout<<"enter key to search: ";
+    cin>>key;
+    mid=(l+h)/2;
+
+while(l<=h)
+{
+    if(x[mid]==key)
+    {
+        cout<<"key found at: "<<i<<endl;
+        return 0;
+    }
+    else if(x[mid]>key)
+    {
+        h=key-1;
+    }
+    else (x[mid]<key);
+    {
+        l=key+1;
+    }
+}
+cout<<"key not found"<<endl;
+return 0;
+}
