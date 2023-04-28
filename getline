@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+char s[50];
+    cout<<"enter name"<<endl;            
+    cin.getline(s,50);
+    cout<<"hello "<<s<<endl;
+
+char s2[50];
+    cout<<"enter name again"<<endl;
+    cin.getline(s2,50);
+    cout<<"hello "<<s2<<endl;
+
+    return 0;
+}
