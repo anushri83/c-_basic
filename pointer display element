@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[5]={2,4,6,8,10};
+    int *p=a;
+
+    cout<<*p<<endl;          
+    p++;                   //this will print one after one
+    cout<<*p<<endl;
+    
+    cout<<p<<endl;
+    cout<<p+2<<endl;      //this will print by skipping one 
+   return 0;  
+}
