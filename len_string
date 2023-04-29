@@ -1,0 +1,11 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    char s[50]="hello world little girl";
+    cout<<"length is"<<strlen(s)<<endl;
+    return 0;
+
+}
