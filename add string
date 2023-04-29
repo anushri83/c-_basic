@@ -1,0 +1,15 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    char s1[20]="good ";
+    char s2[20]="morning";
+    
+    strcat(s1,s2);         //function to add 
+    cout<<s1<<endl;
+
+   //strncat(s1,s2,4);          give:- good morn
+   // cout<<s1<<endl;
+}
