@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+   string  str1="hello";
+   string str2="hiiii";
+   str1.append(" world");       //append in str1 
+   str1.insert(3,"lllll");      //insert at index 3
+   str1.replace(3,2,"l");       //replace 2 elements from index 3
+   str1.erase();           
+   str1.push_back('z');         //push at back
+   str1.pop_back();             //pop from back
+   str1.swap(str2);
+   cout<<str1<<endl;
+   cout<<str2<<endl;
+   cout<<str1.compare(str2)<<endl;         //compare difference in length of two strings
+   cout<<str1 + str2<<endl;                //add 2 string 
+   return 0;
+}
