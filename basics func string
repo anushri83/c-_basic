@@ -1,0 +1,24 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+string str="hello ";
+cout<<str.length()<<endl;             //display length of string                                  
+cout<<str.size()<<endl;               //display size of array               
+cout<<str.capacity()<<endl;           //display capacity of array                        
+str.resize(50);                        //resize size of array          
+cout<<str.capacity()<<endl;                                  
+cout<<str.max_size()<<endl;            //display maximum size                      
+str.clear();                   //clear everything store in str 
+if(str.empty())                  //tells array is empty or not                
+{
+    cout<<"it is empty"<<endl;
+}
+else
+{
+    cout<<str<<endl;
+}
+return 0;
+}
