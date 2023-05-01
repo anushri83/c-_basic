@@ -1,0 +1,14 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    string str="WELCOME";
+    for(int i=0;str[i]!='\0';i++)
+    {
+        str[i]=str[i]+32;          //it display lower case. ascii code of captial alphabet is 65-90 ans smaller alphabet is 97-122,so the difference is 32 
+    }                               //if we add 32 in every captial alpbhabetic it eill convert in smaller alphabet
+    cout<<str<<endl;
+    return 0;
+}
