@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+template<class T>              //this T is a data type
+T maximum(T x,T y)
+{
+    if(x>y)
+    return x;
+    else
+    return y;
+}
+
+int main()
+{ 
+    int c=maximum(10,48);                      //T will be int
+    float d=maximum(10.5f,28.4f);              //T will be float
+    cout<<c<<endl;  
+    cout<<d<<endl;
+    return 0;
+}
