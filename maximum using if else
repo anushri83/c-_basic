@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int maximum(int a, int b, int c)
+{
+    if(a>b && a>c)
+    {
+        return a;
+    }
+    else if (b>c)
+    {
+        return b;
+    }
+    else
+    {
+        return c;
+    }
+}
+int main()
+{
+    int a=60, b=15,c=49 , r;
+    r=maximum(a,b,c);
+    cout<<r<<endl;
+    return 0;
+}
+
