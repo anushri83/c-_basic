@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+
+template<class T,class R>             //this T and R have different data type
+T add(T x,R y)
+{
+    return x+y;
+}
+
+int main()
+{
+    double c=add(10,4.5);             //T will be int R will be double
+    cout<<c<<endl;
+    return 0;
+}
