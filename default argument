@@ -1,0 +1,15 @@
+#include<iostream>                    //default argument
+using namespace std;
+
+int add(int x,int y,int z=0) 
+{
+    return x+y+z;
+}
+
+int main()
+{
+    cout<<add(10,5)<<endl;      //here z is zero             
+    cout<<add(10,28,38)<<endl;
+    return 0;
+}
+
