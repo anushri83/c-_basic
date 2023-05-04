@@ -1,0 +1,29 @@
+
+ #include<iostream>
+using namespace std;
+
+class rectangle
+{
+    public:
+    int length=20;       //you can also declare values of length and breadth here
+    int breadth=10; 
+    int area()  
+    {
+
+        return length*breadth;
+       
+    }
+    int perimeter()
+    {
+        return 2*(length+breadth);
+    }
+};
+  
+int main()
+{
+   rectangle a;
+//    a.length=10;    or can also declare here
+//    a.breadth=20; 
+   cout<<a.area()<<endl;
+   cout<<a.perimeter()<<endl;
+}
