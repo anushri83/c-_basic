@@ -1,0 +1,16 @@
+#include<iostream>                               //pass by reference(almost same as pass by value)
+using namespace std;
+
+int g=15;
+void func()
+{
+    int a=5;
+    g+=a;
+    cout<<g<<endl; 
+}
+int main()
+{
+    //cout<<a<<endl; (invalid as it is local variable)
+    cout<<g<<endl;
+    func(); 
+}
