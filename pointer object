@@ -1,0 +1,30 @@
+ #include<iostream>
+using namespace std;
+
+class rectangle
+{
+    private:            //you should declare data as private and member as public to avooid misuse of data
+    int length=20;       
+    int breadth=10; 
+    public:
+    int area()  
+    {
+        return length*breadth;   
+    }
+    int perimeter()
+    {
+        return 2*(length+breadth);
+    }
+};
+  
+int main()
+{
+   rectangle a;                       //in stack pointer 
+   rectangle*p=&a; 
+   cout<<p->area()<<endl;
+   cout<<p->perimeter()<<endl;
+
+  rectangle *q=new rectangle();     //pointer in heap
+    cout<<q->area()<<endl;
+   cout<<q->perimeter()<<endl;
+}
