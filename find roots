@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int a,b,c,r1,r2;
+    cout<<"enter value of a: "<<endl;
+    cin>>a;
+    cout<<"enter value of b: "<<endl;
+    cin>>b;
+    cout<<"enter value of c: "<<endl;
+    cin>>c;
+    r1=(-b+ sqrt(b*b-4*a*c))/(2*a);
+    r1=(-b- sqrt(b*b-4*a*c))/(2*a);
+
+    cout<<"the roots are: "<<r1<<" "<<r2;
+    return 0;
+}
