@@ -1,0 +1,75 @@
+
+#include<iostream>
+using namespace std;
+
+class rectangle
+{
+    private:
+    int length;       
+    int breadth; 
+
+    public:
+    rectangle()                      //default constructor
+    {                                //we do not need this if we put l=1 an b=1 in parametrized
+        length=1;
+        breadth=1;
+    }
+    rectangle(int l,int b)           //parametrized constructor
+    {
+        setlength(l);
+        setbreadth(b);
+    }
+    rectangle(rectangle(&a))          //copy constructor
+    {
+        length=a.length;
+        breadth=a.breadth;
+    }
+    int setlength(int l)          //set is a mutator
+                                  
+    {
+        if(l>=0)
+        length=l;                  //this set get allow us to give private data and restrict from giving negative data
+        else
+        length=0;
+    }
+
+    int setbreadth(int b)
+    {
+        if(b>=0)
+        breadth=b;
+        else
+        breadth=0;
+    }
+
+   int getlength()                      //get is a accessor
+    {
+        return length;
+    }
+    int getbreadth()
+    {
+        return breadth;
+    }
+    int area()                             //facilitators
+    {
+
+        return length*breadth;
+       
+    }
+    int perimeter()
+    {
+        return 2*(length+breadth);
+    }
+    //~rectangle                           //this is destructor     
+};
+  
+int main()
+{
+   rectangle a;                      //declarations of constructors
+   rectangle a(10,5);       
+   rectangle a2(a);
+   cout<<a.area()<<endl;
+   cout<<a.perimeter()<<endl;
+   cout<<a2.area()<<endl;
+   cout<<a2.perimeter()<<endl;
+   return 0;
+}
