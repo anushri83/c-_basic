@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class test
+{
+    public:
+    int function1()                        //function body is decalred inside the class called as inline function
+};
+    {
+        cout<<"this is inline"<<endl;
+    }
+    int function2();                         //function body is not decalred inside the class called as non inline function
+    //inline int function2();                //althought function body is not decalred inside the class but still it is inline brcause of using keyword inline
+};
+
+int test::function2()           //scope resolution operator(::) is used to declare function body outside the class
+{
+   cout<<"this is not inline"<<endl;
+}
+
+int main()
+{
+    test t;
+    t.function1();
+    t.function2();
+}
