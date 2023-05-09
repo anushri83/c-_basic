@@ -1,0 +1,58 @@
+
+#include <iostream>
+using namespace std;
+
+class student 
+{
+private:
+    int rollNo;
+    int total;
+    float perc;
+    string name;
+
+public:
+    void getDetails(void);
+    void putDetails(void);
+    void grade()
+    {
+        float average= (float)total / 500 * 100;;
+        cout<<"total grades are: "<<endl;
+        if(average<=85)
+        {
+            cout<<"a"<<endl;
+        }
+        else if (average<=50<85)
+        {
+            cout<<"b"<<endl;
+        }
+        else{
+             cout<<"c"<<endl;
+        }  
+    }
+};
+
+void student::getDetails(void)
+{
+    cout << "Enter name: ";
+    cin >> name;
+    cout << "Enter roll number: ";
+    cin >> rollNo;
+    cout << "Enter total marks outof 500: ";
+    cin >> total;
+}
+
+void student::putDetails(void)
+{
+    cout << "Student details:\n";
+    cout << "Name:" << name <<endl <<"Roll Number:" << rollNo <<endl<< "Total:" << total <<endl <<"Percentage:" << perc<<endl;
+}
+
+int main()
+{
+    student anu;
+    anu.getDetails();
+    anu.putDetails();
+    anu.grade();
+    return 0;
+}
+
