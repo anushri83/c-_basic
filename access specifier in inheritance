@@ -1,0 +1,38 @@
+
+#include<iostream>                          
+using namespace std;
+
+class base
+{
+    private:
+    int a ;
+    protected:
+    int b;
+    public: 
+    int c;
+    void funcbase()
+    {
+        a=10;
+        b=20;
+        c=39;
+    }
+};
+
+class derived:public base
+{
+    int funcderived()
+    {
+     //a=1    -------->not allowed as it is private member of base class
+     b=10;    //-------->protected member can only access in inherited class
+     c=50;
+    }
+};
+
+int main()
+{
+    base x;
+   //x.a=20;     -------->private member cannot be accessed outside a class
+   //x.b=82;     -------->protected member cannot access outside the class
+    x.c=28;
+    return 0;
+}
