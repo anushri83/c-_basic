@@ -1,0 +1,35 @@
+
+
+ #include<iostream>                            //inheritance 
+  using namespace std;
+
+class base
+{
+    public:
+    int x;
+    int show()
+    {
+        cout<<x<<endl;
+    }
+};
+
+class derived:public base                      // (:) denotes extension of base class 
+{
+    public:
+
+       int display()
+       {
+        cout<<x<<endl;                        //x is not declared in derived class but as it is declared in base class so it is valid
+       }
+};
+
+int main()
+{
+    base b;
+    b.x=10;
+    b.show();                             //---10
+    derived d;
+    d.x=25;
+    d.display();                         //----25
+    return 0;
+}
