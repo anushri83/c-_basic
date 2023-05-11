@@ -1,0 +1,62 @@
+#include<iostream>                          
+using namespace std;
+
+class employee
+{
+    private:
+   int id;
+   string name;
+   public:
+   employee(int i,string n)              //parametrizezd constructor
+   {
+    id=i;
+    name=n;
+   }
+   int getid()
+   {
+    return id;
+   }
+   string getname()
+   {
+    return name;
+   }
+};
+
+class full_time:public employee                        
+{
+    private:
+    float salary;
+    public:
+    full_time(int i,string n,float sal):employee(i,n)     //full_time is a constructor that is calling constructor employee
+    {
+        salary =sal;
+    }
+    float getsalary()
+    {
+        return salary;
+    }
+};
+
+class part_time:public employee                              //part_time is a constructor that is calling constructor employee
+{
+    private:
+    float wages;
+    public:
+    part_time(int i,string n,float w):employee(i,n)
+    {
+        wages=w;
+    }
+    float getwages()
+     {
+        return wages;
+     }
+};
+
+int main()
+{
+    full_time a(21,"anushri",600000.0);
+    part_time b(22,"john",388);
+    cout<<"salary of"<<a.getname()<<" is "<<a.getsalary()<<endl;      
+    cout<<"salary of"<<b.getname()<<" is "<<b.getwages()<<endl; 
+    return 0; 
+}
