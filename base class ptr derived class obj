@@ -1,0 +1,35 @@
+//base class pointer derived class object
+#include<iostream>
+using namespace std;
+
+class base
+{
+public:
+    int func1()
+    {
+        cout<<"function of base class"<<endl;
+    }
+};
+
+class derived: public base
+{
+    public:
+    int func2()
+    {
+        cout<<"function of derived class"<<endl;
+    }
+};
+
+int main()
+{
+    derived d;
+    d.func1();
+    d.func2();
+    base *p;                 //base class pointer
+    p=new derived();         //pointing to derived class object
+    p->func1();
+    //p->func2();            -----it is not allowed as base class pointer can only access derived class function
+
+    //derived *q;            -----it is not allowed as derived class pointer cannot point to base class object
+    return 0;
+}
