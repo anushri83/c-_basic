@@ -1,0 +1,30 @@
+//function overriding
+#include<iostream>
+using namespace std;
+
+class base
+{
+  public:
+  int display()
+  {
+    cout<<"display of base"<<endl;
+  }
+};
+
+class derived:public base
+{
+   public:
+   //int display(int x)             ------ not allowed because in overidding function prototype must be same
+   int display()
+   {
+    cout<<"display of derived"<<endl;
+   }
+};
+
+int main()
+{
+    derived d;
+    d.display();                //it will give "display of derived" instead of "display of base" because it is overidden function
+    return 0;
+}
+
