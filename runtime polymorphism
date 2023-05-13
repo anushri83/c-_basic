@@ -1,0 +1,55 @@
+//runtime polymorphism(pure virtual function)
+#include<iostream>
+using namespace std;
+
+class car
+{
+    public:
+    virtual void start()=0;                      
+    // {                                         //we are declaring this function body in there own child class as their own so we do not need  body here 
+    //      cout<<"car started"<<endl;           //so to do this we have to make it pure virtual function by putting =0
+    // }
+    virtual void stop()=0;                      //as the class is having pure virtual function then it MUST overide it otherwise it will become abstract class
+    // {                                        //abstract class is class in which functions does not have body
+    //     cout<<"car stopped"<<endl;            
+    // }
+};
+class innova :public car
+{
+   public:
+   void start()
+   {
+    cout<<"innova started"<<endl;
+   }
+   void stop()
+   {
+    cout<<"innova stopped"<<endl;
+   }
+};
+class swift :public car
+{
+   public:
+   void start()
+   {
+    cout<<"swift started"<<endl;
+   }
+   void stop()
+   {
+    cout<<"swift stopped"<<endl;
+   }
+};
+
+int main()
+{
+    //car d;            ---------we cannot create a object of abstract class but we can create a pointer i.e(*c)
+    car *c;                //same pointer *c is used to declare both child classes
+    c=new innova();    
+    c->start();
+    c->stop();
+    c=new swift();
+    c->start();
+    c->stop();
+    return 0;
+}
+
+
