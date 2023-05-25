@@ -1,0 +1,25 @@
+
+//static member function
+#include<iostream>
+using namespace std;
+
+class innova
+{
+  public:
+  static int price;                                   //static member are use to provide a information of a class
+  static int getprice()
+  {
+    return price;
+  }
+};
+int innova:: price=500;             //this price will be common for every obect of innova
+
+int main()
+{
+    innova i1,i2;
+    cout<<i1.price<<endl;          
+    cout<<i2.price<<endl;      
+    cout<<innova::getprice()<<endl;     //this is method to call static member function without object     
+    return 0;
+}
+
