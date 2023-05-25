@@ -1,0 +1,31 @@
+
+//nested inside class
+#include<iostream>
+using namespace std;
+
+class outer
+{
+     public:
+     int a=10;
+     static int b;
+     void func()
+     {
+         i.display();            //outer class can access members of inner class by using inner class object
+     }
+
+     class inner
+     {
+        public:
+         void display()
+         {
+            cout<<"display of inner"<<endl;
+         }
+     };
+     inner i;                   // can create object of inner class after it's declaration
+};
+
+int main()
+{
+   outer::inner i;
+   return 0;
+}
