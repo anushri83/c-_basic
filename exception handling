@@ -1,0 +1,26 @@
+
+//exception handling
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a=10,b=0,c;                        //if b=0 then this is exception
+    try                                    //exception has try catch block to handle exception
+    {
+        if(b==0)
+        {
+            throw 1;                      //if b==0 then it throws 1 otherwise it divides
+        }                                  //we can throw any type of value int,char,float,double
+        else
+            c=a/b;
+             cout<<c<<endl;
+
+    }
+    catch(int e)                        //we have to specify the type of exception throwing 
+    {
+        cout<<"division by zero is not possible "<<endl;
+    }
+    
+ return 0;
+}
